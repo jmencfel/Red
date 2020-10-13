@@ -21,7 +21,7 @@ public class PlayerInteractor : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, MaxInteractionDistance, InteractablesLayer))
         {
-            target = hit.collider.gameObject.GetComponent<ElevatorButton>();
+            target = hit.collider.gameObject.GetComponent<Interactable>();
             if (target != null)
             {
                 target.Interact();
