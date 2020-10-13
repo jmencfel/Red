@@ -183,6 +183,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 5292132960868350739, guid: 4ac3de885a8aa28458c549ff288ee4d3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 6214618726108108401, guid: 4ac3de885a8aa28458c549ff288ee4d3,
         type: 3}
       propertyPath: m_Layer
@@ -443,6 +448,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxInteractionDistance: 3
+  InteractablesLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!114 &317034322 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7901122573682099646, guid: 4ac3de885a8aa28458c549ff288ee4d3,
@@ -492,7 +500,7 @@ MonoBehaviour:
     - {fileID: 2410793085768069240}
     - {fileID: 2124327565}
     Doors: {fileID: 1546553601}
-  elevatorSpeed: 5
+  elevatorSpeed: 15
   currentFloorNumber: 3
   destinationFloorNumber: 0
 --- !u!1 &705507993
@@ -1145,7 +1153,7 @@ GameObject:
   - component: {fileID: 7210342960394666165}
   - component: {fileID: 2236484886522534695}
   - component: {fileID: 6321056242546305562}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ButtonFloor1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1259,7 +1267,7 @@ GameObject:
   - component: {fileID: 1491741540312799190}
   - component: {fileID: 4673504831748506663}
   - component: {fileID: 2410793085768069240}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ButtonFloor4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1327,6 +1335,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800387264561172004, guid: b9b10a268cd503948bf6f7ab30ef1932,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7555548049592663108, guid: b9b10a268cd503948bf6f7ab30ef1932,
         type: 3}
@@ -1434,7 +1447,7 @@ GameObject:
   - component: {fileID: 7543694654183209221}
   - component: {fileID: 7410596793051742431}
   - component: {fileID: 8364806273873024146}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Cieling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1602,6 +1615,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 6514773819270002352, guid: 72110e03eebc85d4b90b5aa2f8511ab7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8339166499616804596, guid: 72110e03eebc85d4b90b5aa2f8511ab7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 72110e03eebc85d4b90b5aa2f8511ab7, type: 3}
@@ -1631,30 +1649,13 @@ GameObject:
   - component: {fileID: 3372770878430194306}
   - component: {fileID: 2661113543121788498}
   - component: {fileID: 9133209861276535341}
-  - component: {fileID: 5903324671053945472}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!54 &5903324671053945472
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5903324671053945471}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 3
 --- !u!1 &5940595995334975229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1668,7 +1669,7 @@ GameObject:
   - component: {fileID: 2465926014300876414}
   - component: {fileID: 1852160016147498747}
   - component: {fileID: 2335904933074495177}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ButtonFloor2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1884,6 +1885,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 5292132960868350739, guid: 4ac3de885a8aa28458c549ff288ee4d3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 6214618726108108401, guid: 4ac3de885a8aa28458c549ff288ee4d3,
         type: 3}
       propertyPath: m_Layer
@@ -1976,7 +1982,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7079324517490787649}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Buttons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2004,7 +2010,7 @@ GameObject:
   - component: {fileID: 3471542958236165748}
   - component: {fileID: 2145039520285551836}
   - component: {fileID: 3740680752795552438}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ButtonFloor3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2097,7 +2103,7 @@ GameObject:
   - component: {fileID: 8141080443648207724}
   - component: {fileID: 8141080443648207725}
   - component: {fileID: 8141080443648207726}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BackWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2190,7 +2196,7 @@ GameObject:
   - component: {fileID: 8141080444125408170}
   - component: {fileID: 8141080444125408171}
   - component: {fileID: 8141080444125408172}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: LeftWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2227,13 +2233,40 @@ GameObject:
   m_Component:
   - component: {fileID: 8141080444192781986}
   - component: {fileID: 634244085}
-  m_Layer: 8
+  - component: {fileID: 8141080444192781989}
+  - component: {fileID: 8141080444192781988}
+  m_Layer: 0
   m_Name: Elevator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &8141080444192781988
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8141080444192781987}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.287277, y: 2.9198246, z: 2.383751}
+  m_Center: {x: -16.408031, y: -11.65421, z: -0.046495438}
+--- !u!114 &8141080444192781989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8141080444192781987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3820c88537a788468d2c33d0c0ccd10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &8141080444314851044
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2320,7 +2353,7 @@ GameObject:
   - component: {fileID: 8141080444314851044}
   - component: {fileID: 8141080444314851045}
   - component: {fileID: 8141080444314851046}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RightWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}

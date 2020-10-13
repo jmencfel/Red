@@ -4,6 +4,7 @@ public class PlayerInteractor : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] private float MaxInteractionDistance = 2.0f;
+    [SerializeField] private LayerMask InteractablesLayer;
     private Interactable target;
 
     void Update()
@@ -18,12 +19,16 @@ public class PlayerInteractor : MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, MaxInteractionDistance))
+        if (Physics.Raycast(ray, out hit, MaxInteractionDistance, InteractablesLayer))
         {
-            target = hit.transform.gameObject.GetComponent<ElevatorButton>();
+            target = hit.collider.gameObject.GetComponent<ElevatorButton>();
             if (target != null)
             {
                 target.Interact();
+            }
+            else
+            {
+                Debug.Log(hit.transform.gameObject.name);
             }
 
         }
