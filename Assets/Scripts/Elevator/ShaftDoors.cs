@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ShaftDoors : MonoBehaviour
 {
+    [Header("References")]
     [SerializeField] private Animation doorAnimation;
 
     public void Open()

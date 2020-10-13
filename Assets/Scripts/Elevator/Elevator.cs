@@ -17,9 +17,7 @@ public class Elevator : MonoBehaviour
         {
             foreach (ElevatorButton b in f.Buttons)
             {
-                b.floor = f.Number;
-                b.door = f.Doors;
-                b.height = f.Height;
+                b.SetValues(f.Number, f.Height, f.Doors);
                 b.onInteract += CallElevator;
             }
         }
@@ -57,6 +55,7 @@ public class Elevator : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, desiredPosition, elevatorSpeed*Time.deltaTime);
             yield return null;
         }
+        GameController.instance.SetFloor((int)destinationFloorNumber);
         currentFloorNumber = destinationFloorNumber;        
     }
 

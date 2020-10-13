@@ -31,7 +31,6 @@ public class PlayerMovement : MonoBehaviour
     private void Move()
     {       
        Vector3 direction = transform.forward * movementSpeed * movement.y + transform.right * movementSpeed * movement.x;
-
        if (CheckStepPossible(direction * 0.3f))
           body.MovePosition(transform.position + direction * Time.deltaTime);       
     }

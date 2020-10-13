@@ -21,7 +21,10 @@ public class PlayerJump : MonoBehaviour
             shouldJump = Input.GetKeyDown(KeyCode.Space);
 
         if(!isGrounded)
-        isGrounded = Physics.CheckSphere(groundCheck.position, 0.1f, groundLayer);
+        {
+            GameController.instance.CalculateFloor(transform.position.y);
+            isGrounded = Physics.CheckSphere(groundCheck.position, 0.1f, groundLayer);
+        }       
     }
     private void FixedUpdate()
     {
@@ -30,6 +33,7 @@ public class PlayerJump : MonoBehaviour
             isGrounded = false;
             shouldJump = false;
             body.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            GameController.instance.IncreaseJumps();           
         }
     }
 }
