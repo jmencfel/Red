@@ -7,6 +7,9 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] Rigidbody body;
+    [SerializeField] PlayerJump playerJump;
+    [SerializeField] Transform fallCheck;
+
     [Header("Settings")]
     [SerializeField] float movementSpeed = 10.0f;
     private Vector2 movement;
@@ -22,12 +25,28 @@ public class PlayerMovement : MonoBehaviour
     }
     private void GetInput()
     {
-        movement.x = Input.GetAxis("Horizontal");
-        movement.y = Input.GetAxis("Vertical");
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
     }
     private void Move()
-    {
-        body.MovePosition(transform.position + transform.forward * movementSpeed * movement.y * Time.deltaTime  +transform.right * movementSpeed * movement.x * Time.deltaTime);      
-    }
+    {       
+       Vector3 direction = transform.forward * movementSpeed * movement.y + transform.right * movementSpeed * movement.x;
 
+       if (CheckStepPossible(direction * 0.3f))
+          body.MovePosition(transform.position + direction * Time.deltaTime);       
+    }
+    private bool CheckStepPossible(Vector3 dir)
+    {
+        if (!playerJump.IsGrounded)
+            return true;
+
+        dir.y = -1.0f;
+        fallCheck.position = transform.position + dir;
+        if (Physics.CheckSphere(fallCheck.position, 0.3f))
+        {
+            Debug.DrawRay(fallCheck.position, transform.up * 1.0f, Color.yellow);
+            return true;
+        }
+        return false;
+    }
 }

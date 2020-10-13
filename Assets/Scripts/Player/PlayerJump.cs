@@ -14,6 +14,7 @@ public class PlayerJump : MonoBehaviour
 
     private bool shouldJump = false;
     private bool isGrounded = true;
+    public bool IsGrounded { get { return isGrounded; } }
     private void Update()
     {
         if (!shouldJump)

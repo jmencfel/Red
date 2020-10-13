@@ -282,12 +282,12 @@ GameObject:
   - component: {fileID: 98176812}
   - component: {fileID: 98176811}
   - component: {fileID: 98176810}
-  - component: {fileID: 98176809}
   - component: {fileID: 98176813}
   - component: {fileID: 98176814}
   - component: {fileID: 98176815}
   - component: {fileID: 98176808}
   - component: {fileID: 98176816}
+  - component: {fileID: 98176809}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -317,7 +317,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 98176807}
-  m_Material: {fileID: 13400000, guid: aa7415045e4977440a4ce5cb0074db34, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
@@ -384,6 +384,7 @@ Transform:
   m_Children:
   - {fileID: 963194228}
   - {fileID: 959326053}
+  - {fileID: 423815285}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -416,6 +417,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 98176813}
+  playerJump: {fileID: 98176815}
+  fallCheck: {fileID: 423815285}
   movementSpeed: 5
 --- !u!114 &98176815
 MonoBehaviour:
@@ -463,6 +466,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6faa725c09fb93547b869712bed8577c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &423815284
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 423815285}
+  m_Layer: 0
+  m_Name: FallCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &423815285
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423815284}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.002, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 98176812}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &634244085
 MonoBehaviour:
   m_ObjectHideFlags: 0
