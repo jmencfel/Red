@@ -7,13 +7,23 @@ public class ShaftDoors : MonoBehaviour
     [Header("References")]
     [SerializeField] private Animation doorAnimation;
 
+    private bool isOpen = false;
+
     public void Open()
     {
-        doorAnimation.Play("OpenElevatorDoors");
+        if (!isOpen)
+        {
+            isOpen = true;
+            doorAnimation.Play("OpenElevatorDoors");
+        }
     }
     public void Close()
     {
-        doorAnimation.Play("CloseElevatorDoors");
+        if (isOpen)
+        {
+            isOpen = false;
+            doorAnimation.Play("CloseElevatorDoors");
+        }
     }
     public bool IsAnimationPlaying()
     {
